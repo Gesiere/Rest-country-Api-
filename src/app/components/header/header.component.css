@@ -1,0 +1,17 @@
+.mat-toolbar{
+    font: inherit;
+    padding: 0;
+}
+
+button{
+    font-weight: 600;
+}
+
+
+
+
+@media (max-width: 764px){
+    .mat-toolbar h1 {
+        font-size: 1rem; 
+    }
+}

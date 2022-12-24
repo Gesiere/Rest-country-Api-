@@ -1,0 +1,12 @@
+ .filter-menu{
+    width: 14rem;
+    margin-top: 10px;
+}
+
+.customize + * .cdk-overlay-pane{
+    margin-top: 5px;
+}
+
+.dark{
+    background-color: var(--darkBlue);
+}

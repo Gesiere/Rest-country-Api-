@@ -1,1 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+    --light-grey:hsl(0, 0%, 98%);
+    --white: hsl(0, 0%, 100);
+    --dark-grey:  hsl(0, 0%, 52%);
+    --darkBlue: hsl(207, 26%, 17%);
+    --darkBlueBg: hsl(207, 26%, 17%);
+    --darkBlueText: hsl(200, 15%, 8%);
+}
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    transition: all 0.4s ease-in-out;
+}
+
+html, body { height: 100%; }
+body { 
+    margin: 0;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+img{
+    display: block;
+}
+
+input:focus{
+outline: none;
+}
+
+.text-white{
+    color: var(--white);
+}
+
+
+
+

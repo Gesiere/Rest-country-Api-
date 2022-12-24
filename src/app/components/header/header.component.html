@@ -1,0 +1,19 @@
+<header class="dark:bg-darkBlue">
+    <mat-toolbar class="xl:max-w-[78rem] max-w-[90%] sm:max-w-2xl justify-between mx-auto md:max-w-[52rem] lg:max-w-4xl bg-neutral dark:bg-darkBlue">
+            <h1 class="dark:text-neutral">Where in the world?</h1>
+            <div class="mode-change">
+                <button *ngIf="!isDarkEnabled" (click)="toggleMode('dark')" mat-button class="flex items-center justify-center dark:text-neutral">
+                    <mat-icon class="material-icons-outlined pr-8">
+                    dark_mode_outlined
+                    </mat-icon>
+                    Dark Mode
+                </button>
+                <button  (click)="toggleMode('light')" *ngIf="isDarkEnabled" mat-button class="flex items-center justify-center dark:text-neutral">
+                    <mat-icon class="material-icons-outlined pr-8">
+                    light_mode_outlined
+                    </mat-icon>
+                    Light Mode
+                </button>
+            </div>
+    </mat-toolbar>
+</header>

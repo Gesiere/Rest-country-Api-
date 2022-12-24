@@ -1,0 +1,16 @@
+<div class="filter-container lg:py-8">
+    <button mat-button (click)="tofilter()" [matMenuTriggerFor]="menu" class="dark:bg-darkBlue dark:text-neutral shadow-lg p-4 pl-8 font-semibold bg-neutral">
+        {{filterString}}
+        <mat-icon class="ml-8 pt-2">
+            expand_more
+        </mat-icon>
+    </button>
+</div>
+    <mat-menu #menu="matMenu" backdropClass="customize"  class="dark:bg-darkBlue">
+        <div class="filter-menu">
+            <button mat-menu-item class=" dark:text-neutral" *ngFor="let region of regionOptions "
+            (click)="onFilterRegion(region)">{{region}}</button>
+         
+        </div>
+    </mat-menu>
+

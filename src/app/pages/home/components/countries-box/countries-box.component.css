@@ -1,0 +1,20 @@
+.mat-mdc-card-content:last-child{
+    padding-bottom: 2.25rem;
+    padding-top: 1rem;
+}
+
+h4{
+    color: #000000;
+}
+
+h4 span {
+    color: var(--dark-grey);
+}
+
+.mat-mdc-card-title{
+    margin-bottom: 1rem;
+}
+
+h4{
+    font-size: 1rem;
+}

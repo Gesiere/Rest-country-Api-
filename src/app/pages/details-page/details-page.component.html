@@ -1,0 +1,37 @@
+<main class="bg-lightBG dark:bg-darkBlueBg">
+    <div class="xl:max-w-[78rem] max-w-[90%] sm:max-w-2xl  lg:max-w-4xl md:max-w-[52rem] mx-auto py-20">
+        <button mat-stroked-button routerLink="" class="flex dark:text-neutral items-center justify-center shadow-2xl dark:shadow-xl py-2 px-8">
+            <mat-icon class="pr-8">arrow_back</mat-icon>
+            Back
+        </button>
+
+        <section class="pt-20">
+            <div class="country-details grid md:grid-cols-2 items-center">
+                    <img [src]="country.flag" class="w-full md:w-[80%]" alt="Country Image">
+                <div class="country-info">
+                    <h2 class="font-bold mt-4 md:mt-0 mb-8 text-lg md:text-4xl dark:text-neutral">{{country.name}}</h2>
+                    <div class="md:flex justify-between">
+                        <div class="dark:text-neutral">
+                            <h4 class="font-semibold leading-8 text-lg">Native name: <span class="">{{country.nativeName}}</span></h4>
+                            <h4 class="font-semibold leading-8 text-lg">Population: <span class="">{{country.population | number}}</span></h4>
+                            <h4 class="font-semibold leading-8 text-lg">Region: <span class="">{{country.region}}</span></h4>
+                            <h4 class="font-semibold leading-8 text-lg">Subregion: <span class="">{{country.subregion}}</span></h4>
+                            <h4 class="font-semibold leading-8 text-lg">Capital: <span class="">{{country.capital}}</span></h4>
+                        </div>
+                        <div class="dark:text-neutral mt-12  md:mt-0">
+                            <h4 class="font-semibold leading-8 text-lg">Top Level Domain: <span class="">{{country.topLevelDomain}}</span></h4>
+                            <h4 class="font-semibold leading-8 text-lg">Currencies: <span class="" *ngFor="let currency of country.currencies">{{currency.code}}</span></h4>
+                            <h4 class="font-semibold leading-8 text-lg">Language: <span class="">{{country.languages[0].name}}</span></h4>
+                        </div>
+                    </div>
+                    <div class="md:flex items-center mt-8" *ngIf="borders">
+                        <h3 class="text-xl  md:text-lg font-bold mb-4 md:mb-0 mr-4 dark:text-neutral">Border Countries</h3>
+                        <div class="">
+                            <button mat-button class="p-4 shadow-lg md:px-8 mr-4 dark:bg-darkBlue md dark:text-neutral mb-4" *ngFor="let border of borders" (click)="gotoCountry(border)">{{border.name}}</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>

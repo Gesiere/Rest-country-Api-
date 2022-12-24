@@ -1,0 +1,19 @@
+<div class="countries">
+  <div class="sm:grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 sm:gap-8 md:gap-12 xl:gap-20 max-w-[80%] sm:max-w-none mx-auto">
+      <mat-card class="mb-12 cursor-pointer sm:mb-0 dark:bg-darkBlue dark:text-neutral" *ngFor="let country of countries" (click)="getDetails(country)">
+        <img  [src]="country.flag" alt="The {{country.name}} flag" class="w-full h-48">
+        <mat-card-content >
+          <mat-card-title class="font-medium">{{country.name}}</mat-card-title>
+          <mat-card-subtitle>
+            <h4 class="dark:text-neutral">Population:<span class="font-medium ml-1">{{country.population | number}}</span></h4>
+          </mat-card-subtitle>
+          <mat-card-subtitle>
+            <h4 class="dark:text-neutral">Region:<span class="font-medium ml-1">{{country.region}}</span></h4>
+          </mat-card-subtitle>
+          <mat-card-subtitle>
+            <h4 class="dark:text-neutral">Capital:<span class="font-medium ml-1">{{country.capital}}</span></h4>
+          </mat-card-subtitle>
+        </mat-card-content>
+      </mat-card>
+  </div>
+</div>

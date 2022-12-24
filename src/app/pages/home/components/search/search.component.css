@@ -1,0 +1,11 @@
+.mat-icon{
+    color: var(--dark-grey) ;
+}
+
+
+@media (max-width:991px) {
+    .search-area {
+        text-align: center;
+    }
+    
+}

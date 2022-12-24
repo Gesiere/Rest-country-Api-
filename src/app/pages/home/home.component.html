@@ -1,0 +1,12 @@
+<main class="bg-lightBG dark:bg-darkBlueBg">
+    <div class="xl:max-w-[78rem] max-w-[90%] sm:max-w-2xl  lg:max-w-4xl md:max-w-[52rem] mx-auto">
+        <div class="lg:flex justify-between">
+            <app-search (searchChangeText)="onSearchChange($event)"></app-search>
+            <app-filter [regionOptions]="regionOptions" (showRegion)="onShowRegion($event)"></app-filter>
+        </div>
+
+        <div class="countries-list pt-8">
+            <app-countries-box [countries]="countries" [searchValue]="searchText"></app-countries-box>
+        </div>
+    </div>
+</main>
